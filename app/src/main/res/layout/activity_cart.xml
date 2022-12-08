@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cartVM" type="com.shopyyy.app.modules.cart.data.viewmodel.CartVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnmenu"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStylewhite_A700">
+            <LinearLayout android:id="@+id/linearRowmenu"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_height="@dimen/_13pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                <LinearLayout android:id="@+id/linearRowsignal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageSignal"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_59pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_signal"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_signal"/>
+                    <ImageView android:id="@+id/imageCar"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_100pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_car"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_car"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearCart"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMyCart"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.05" android:singleLine="true"
+                android:text="@{cartVM.cartModel.txtMyCart}"
+                android:textAllCaps="true"
+                style="@style/txtLatoregular18" tools:text="@string/lbl_my_cart"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerCart"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_32pxh}" tools:itemCount="2" tools:listitem="@layout/row_cart"/>
+            <View android:background="@color/gray_200"
+                android:id="@+id/lineLineSeventeen"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_390pxh"/>
+            <LinearLayout android:id="@+id/linearRowsubtotal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSubtotal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtSubtotal}"
+                    android:textAllCaps="true"
+                    style="@style/txtLatosemibold14_1" tools:text="@string/lbl_sub_total"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.05"
+                    android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtPriceTwo}"
+                    android:textAllCaps="true"
+                    style="@style/txtLatoregular18" tools:text="@string/lbl_111_80"/>
+            </LinearLayout>
+            <View android:background="@color/gray_200"
+                android:id="@+id/lineLineEighteen"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_390pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_indigo_a200_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:id="@+id/btnPay111Eighty"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_48pxv"
+                android:layout_width="@dimen/_326pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_pay_111_80"
+                android:textAllCaps="true"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_13pxh"
+                android:textStyle="bold" tools:text="@string/lbl_pay_111_80"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

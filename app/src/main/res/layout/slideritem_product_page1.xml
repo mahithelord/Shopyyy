@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSliderrectangleelevenModel" type="com.shopyyy.app.modules.productpage.data.model.ImageSliderSliderrectangleelevenModel"/>
+    </data>
+    <ImageView android:id="@+id/imageRectangleEleven"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:scaleType="fitXY"
+        imageUrl="@{imageSliderSliderrectangleelevenModel.imageRectangleEleven}"
+        placeHolder="@{@drawable/image_not_found}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle11"/>
+</layout>

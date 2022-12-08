@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="registerVM" type="com.shopyyy.app.modules.register.data.viewmodel.RegisterVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearRegister"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtHelloRegister"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.04"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{registerVM.registerModel.txtHelloRegister}"
+            style="@style/txtLatobold24" tools:text="@string/msg_hello_register"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumngroup5624"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_50_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:hint="@string/lbl_first_name"
+                android:id="@+id/etGroup5624" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_20pxv"
+                android:singleLine="true"
+                android:text="@={registerVM.registerModel.etGroup5624Value}"
+                android:textColor="@color/bluegray_400"
+                android:textColorHint="@color/bluegray_400"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_50_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:hint="@string/lbl_last_name"
+                android:id="@+id/etGroup5625" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_20pxv"
+                android:singleLine="true"
+                android:text="@={registerVM.registerModel.etGroup5625Value}"
+                android:textColor="@color/bluegray_400"
+                android:textColorHint="@color/bluegray_400"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_50_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:hint="@string/lbl_email"
+                android:id="@+id/etGroup5628" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_20pxv"
+                android:singleLine="true"
+                android:text="@={registerVM.registerModel.etGroup5628Value}"
+                android:textColor="@color/bluegray_400"
+                android:textColorHint="@color/bluegray_400"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_50_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:hint="@string/lbl_password"
+                android:id="@+id/etGroup5627" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_20pxv"
+                android:singleLine="true"
+                android:text="@={registerVM.registerModel.etGroup5627Value}"
+                android:textColor="@color/bluegray_400"
+                android:textColorHint="@color/bluegray_400"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_indigo_a200_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:gravity="center" android:id="@+id/btnRegister"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_register"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_register"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnlineone"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowlineone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <View android:background="@color/indigo_50"
+                    android:id="@+id/lineLineOne"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_112pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOrLoginwith"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{registerVM.registerModel.txtOrLoginwith}"
+                    style="@style/txtLatoregular14_1" tools:text="@string/lbl_or_login_with"/>
+                <View android:background="@color/indigo_50"
+                    android:id="@+id/lineLineTwo"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_111pxh"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearRowfacebook"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <FrameLayout android:id="@+id/frameStackfacebook"
+                    android:layout_height="@dimen/_56pxv"
+                    android:layout_width="@dimen/_168pxh" style="@style/groupStylewhite_A700cornerRadius">
+                    <ImageView android:id="@+id/imageFacebook"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_12pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_facebook"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_facebook"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frameStackgoogle"
+                    android:layout_height="@dimen/_56pxv"
+                    android:layout_width="@dimen/_168pxh" style="@style/groupStylewhite_A700cornerRadius">
+                    <ImageView android:id="@+id/imageGoogle"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_23pxh"
+                        android:layout_width="@dimen/_23pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_google"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_google"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtConfirmation"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{registerVM.registerModel.txtConfirmation}"
+            style="@style/txtLatoregular14_3" tools:text="@string/msg_already_have_an"/>
+    </LinearLayout>
+</layout>

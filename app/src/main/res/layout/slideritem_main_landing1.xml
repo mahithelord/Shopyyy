@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderSlidershoesonheelsModel" type="com.shopyyy.app.modules.mainlanding.data.model.ImageSliderSlidershoesonheelsModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnshoesonheels"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_height="@dimen/_236pxv"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageUrl="@{imageSliderSlidershoesonheelsModel.imageImage}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtShoesonheels"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.02" android:singleLine="true"
+            android:text="@{imageSliderSlidershoesonheelsModel.txtShoesonheels}"
+            style="@style/txtLatoregular13" tools:text="@string/lbl_shoes_on_heels"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{imageSliderSlidershoesonheelsModel.txtPrice}"
+            android:textAllCaps="true" style="@style/txtLatosemibold13" tools:text="@string/lbl_28_99"/>
+    </LinearLayout>
+</layout>

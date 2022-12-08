@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="mainLandingRowModel" type="com.shopyyy.app.modules.mainlanding.data.model.MainLandingRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowprice"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylecornerRadius_3">
+        <ImageView android:id="@+id/imageImageSeven"
+            android:layout_height="@dimen/_56pxh"
+            android:layout_width="@dimen/_56pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_image_56X56}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_56X56"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnprice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPriceTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{mainLandingRowModel.txtPriceTwo}"
+                style="@style/txtLatomedium13" tools:text="@string/lbl_43_90"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCottonblackdr"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{mainLandingRowModel.txtCottonblackdr}"
+                style="@style/txtLatoregular12_1" tools:text="@string/msg_cotton_black_dr"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

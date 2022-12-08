@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemMenuModel" type="com.shopyyy.app.modules.itemmenu.data.model.DrawerItemMenuModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumn"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumneye"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyleblack_900_90">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearMenu"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <ImageView android:id="@+id/imageEye"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_eye_26X26"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_eye_26X26"/>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearColumncart"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCART"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.05"
+                        android:singleLine="true"
+                        android:text="@{drawerItemMenuModel.txtCART}"
+                        android:textAllCaps="true"
+                        style="@style/txtLatoregular18" tools:text="@string/lbl_cart"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtPROFILE"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.05"
+                        android:singleLine="true"
+                        android:text="@{drawerItemMenuModel.txtPROFILE}"
+                        android:textAllCaps="true"
+                        style="@style/txtLatoregular18" tools:text="@string/lbl_profile"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtClothing"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.05"
+                        android:singleLine="true"
+                        android:text="@{drawerItemMenuModel.txtClothing}"
+                        android:textAllCaps="true"
+                        style="@style/txtLatoregular18" tools:text="@string/lbl_clothing"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtShoes"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.05"
+                        android:singleLine="true"
+                        android:text="@{drawerItemMenuModel.txtShoes}"
+                        android:textAllCaps="true"
+                        style="@style/txtLatoregular18" tools:text="@string/lbl_shoes"/>
+                    <LinearLayout android:id="@+id/linearRowfacebook"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageFacebook"
+                            android:layout_height="@dimen/_26pxh"
+                            android:layout_width="@dimen/_26pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_facebook_26X26"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_facebook_26X26"/>
+                        <ImageView android:id="@+id/imageSettings"
+                            android:layout_height="@dimen/_26pxh"
+                            android:layout_width="@dimen/_26pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_settings"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_settings"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageVector"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

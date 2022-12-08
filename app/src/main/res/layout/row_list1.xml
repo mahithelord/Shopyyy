@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="list1RowModel" type="com.shopyyy.app.modules.productsearch.data.model.List1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnsliders"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_height="@dimen/_171pxh"
+            android:layout_width="@dimen/_171pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_image_171X171}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_171X171"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtSliders"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.02" android:singleLine="true"
+            android:text="@{list1RowModel.txtSliders}"
+            style="@style/txtLatoregular13" tools:text="@string/lbl_sliders2"/>
+    </LinearLayout>
+</layout>
