@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashVM" type="com.shopyyy.app.modules.splash.data.viewmodel.SplashVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnellipse224"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearSplash"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <ImageView android:id="@+id/imageEllipse224"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_110pxh"
+                android:layout_width="@dimen/_284pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_ellipse224}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse224"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtShopsie"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{splashVM.splashModel.txtShopsie}"
+                style="@style/txtPlayfairDisplayromanmedium65" tools:text="@string/lbl_shopsie"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtThebestwayto"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{splashVM.splashModel.txtThebestwayto}"
+                style="@style/txtLatoregular14" tools:text="@string/msg_the_best_way_to"/>
+            <ImageView android:id="@+id/imageEllipse224One"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_307pxh"
+                android:layout_width="@dimen/_137pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_ellipse224_307X137}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse224_307X137"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

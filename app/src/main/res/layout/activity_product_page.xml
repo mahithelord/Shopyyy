@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="productPageVM" type="com.shopyyy.app.modules.productpage.data.viewmodel.ProductPageVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStylewhite_A700">
+            <LinearLayout android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_width="@dimen/_14pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <LinearLayout android:id="@+id/linearRowsignal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageSignal"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_59pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_signal"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_signal"/>
+                    <ImageView android:id="@+id/imageCar"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_100pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_car"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_car"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearProductpage"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <com.asksira.loopingviewpager.LoopingViewPager
+                android:gravity="start"
+                android:id="@+id/imageSliderSliderrectangleeleven"
+                android:layout_height="@dimen/_436pxv"
+                android:layout_width="match_parent"
+                app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorGroup5646"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:drawable_normal="@drawable/indicator_unselected_bg_gray_600_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_indigo_a200_radius_8"
+                app:indicator_size="@dimen/_15pxh" app:indicator_spacing="@dimen/_4pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPrintMaxiDres"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{productPageVM.productPageModel.txtPrintMaxiDres}"
+                style="@style/txtLatoregular24" tools:text="@string/msg_print_maxi_dres"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{productPageVM.productPageModel.txtPrice}"
+                style="@style/txtLatomedium20" tools:text="@string/lbl_99_30"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{productPageVM.productPageModel.txtTitle}"
+                android:textAllCaps="true"
+                style="@style/txtLatosemibold14_1" tools:text="@string/lbl_product_details"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{productPageVM.productPageModel.txtDescription}"
+                style="@style/txtLatoregular14_6" tools:text="@string/msg_mini_dress_with"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_indigo_a200_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:gravity="center" android:id="@+id/btnAddToCart"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_add_to_cart"
+                android:textAllCaps="true"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_13pxh"
+                android:textStyle="bold" tools:text="@string/lbl_add_to_cart"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
